@@ -1,0 +1,18 @@
+function validateForm () {
+	for (i = 0; i < myForm.elements.length; i++) {
+		if (myForm.elements[i].className == "reg" && myForm.elements[i].value.length == 0){
+			alert('Please fill in all required fields');	
+			return false;
+		}
+	}
+	
+	var email = document.getElementById('email').value;
+	var atpos = email.indexOf('@');
+	var dotpos = email.lastIndexOf('.');
+	if (atpos < 1 || dotpos < atpos+2 || dotpos+2 >= x.length) {
+		alert('Please type a valid email address');
+		return false;
+		
+	}
+		
+}
